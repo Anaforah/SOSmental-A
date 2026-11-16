@@ -33,7 +33,7 @@
       <nav class="main-nav" aria-label="Navegação principal">
         <a href="#como-funciona">Como funciona</a>
         <a href="#porque-sos">Porquê o SOS Mental</a>
-        <a class="nav-cta" href="em-desenvolvimento.html">Começar agora <span aria-hidden="true">↗</span></a>
+        <a id="cta-button" class="nav-cta" href="em-desenvolvimento.html">Começar agora <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
@@ -44,7 +44,7 @@
           <h1>Está tudo bem<br /><em>pedir ajuda.</em></h1>
           <p class="hero-text">Uma conversa pode mudar o teu dia. Encontra um psicólogo e faz a consulta por videochamada na hora que precisas.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="em-desenvolvimento.html">Encontrar um psicólogo <span>↗</span></a>
+            <a id="cta-button" class="button button-primary" href="em-desenvolvimento.html">Encontrar um psicólogo <span>↗</span></a>
             <a class="text-link" href="#como-funciona">Descobrir como funciona <span>↓</span></a>
           </div>
         </div>
@@ -83,7 +83,7 @@
 
       <section class="cta-section" id="comece-agora">
         <div><div class="section-label">03 — Estás pronto?</div><h2>Cuida de ti,<br /><em>hoje.</em></h2><p>O apoio que procuras pode estar a uma chamada de distância.</p></div>
-        <a class="button button-light" href="em-desenvolvimento.html">Começar agora <span>↗</span></a>
+        <a id="cta-button" class="button button-light" href="em-desenvolvimento.html">Começar agora <span>↗</span></a>
       </section>
     </main>
 
@@ -94,5 +94,13 @@
       <small>© 2024 SOS Mental</small>
     </footer>
     <script src="script.js"></script>
+    <script>
+  document.getElementById('cta-button').addEventListener('click', function() {
+    gtag('event', 'cta_click', {
+      event_category: 'CTA',
+      event_label: 'Botao principal'
+    });
+  });
+</script>
   </body>
 </html>
